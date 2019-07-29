@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         do {
             let tripFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Trip")
-            let existingTrips = try managedObjectContext.fetch(tripFetchRequest) as! [Trip]
+            let existingTrips = try persistentContainer.viewContext.fetch(tripFetchRequest) as! [Trip]
             
             if existingTrips.count == 0 {
                 let trip = Trip(context: persistentContainer.viewContext)
@@ -37,13 +37,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     // MARK: - Core Data stack
-    
-    lazy var managedObjectContext: NSManagedObjectContext = {
-        let coordinator = persistentContainer.persistentStoreCoordinator
-        var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-        managedObjectContext.persistentStoreCoordinator = coordinator
-        return managedObjectContext
-    }()
 
     lazy var persistentContainer: NSPersistentContainer = {
         /*

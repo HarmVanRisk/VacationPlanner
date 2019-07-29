@@ -12,7 +12,7 @@ class TripNotesViewController: NSViewController {
     
     @IBOutlet var objectController: NSObjectController!
     
-    var trip : Trip {
+    var trip : Trip! {
         didSet {
             objectController.content = trip
         }

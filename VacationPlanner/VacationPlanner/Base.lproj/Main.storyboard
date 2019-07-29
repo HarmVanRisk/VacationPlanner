@@ -724,12 +724,7 @@
                     </connections>
                 </splitViewController>
                 <customObject id="1FM-aU-q6Z" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController mode="entity" entityName="Trip" automaticallyPreparesContent="YES" id="67J-gx-yz0">
-                    <connections>
-                        <binding destination="BFu-Fd-MEa" name="managedObjectContext" keyPath="self.managedObjectContext" id="x0T-8R-L4Z"/>
-                    </connections>
-                </arrayController>
-                <userDefaultsController id="3Yp-kn-omV"/>
+                <arrayController mode="entity" entityName="Trip" automaticallyPreparesContent="YES" id="67J-gx-yz0"/>
                 <userDefaultsController representsSharedInstance="YES" id="9Js-2H-rGZ"/>
             </objects>
             <point key="canvasLocation" x="74" y="709"/>
@@ -802,6 +797,13 @@
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <connections>
+                                                    <binding destination="JW7-8b-oZY" name="value" keyPath="selection.name" id="rPA-qa-xv6">
+                                                        <dictionary key="options">
+                                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <visibilityPriorities>
@@ -836,6 +838,7 @@
                                                 </datePickerCell>
                                                 <connections>
                                                     <action selector="dateChanged:" target="0hT-KB-2W1" id="q4n-X0-BXm"/>
+                                                    <binding destination="JW7-8b-oZY" name="value" keyPath="selection.startDate" id="nis-9f-vd8"/>
                                                 </connections>
                                             </datePicker>
                                         </subviews>
@@ -871,6 +874,7 @@
                                                 </datePickerCell>
                                                 <connections>
                                                     <action selector="dateChanged:" target="0hT-KB-2W1" id="dMQ-55-gvW"/>
+                                                    <binding destination="JW7-8b-oZY" name="value" keyPath="selection.endDate" id="9ID-Pb-siv"/>
                                                 </connections>
                                             </datePicker>
                                         </subviews>
@@ -935,6 +939,13 @@
                                                         </items>
                                                     </menu>
                                                 </popUpButtonCell>
+                                                <connections>
+                                                    <binding destination="JW7-8b-oZY" name="selectedValue" keyPath="selection.tripType" id="srs-7a-ff0">
+                                                        <dictionary key="options">
+                                                            <string key="NSNullPlaceholder">None Selected</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
                                             </popUpButton>
                                         </subviews>
                                         <visibilityPriorities>
@@ -952,6 +963,9 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <binding destination="JW7-8b-oZY" name="value" keyPath="selection.archived" id="dL3-er-ZwQ"/>
+                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tCW-Vl-r8q">
                                         <rect key="frame" x="75" y="-7" width="94" height="32"/>
@@ -1030,6 +1044,13 @@
                                             <size key="minSize" width="410" height="260"/>
                                             <size key="maxSize" width="410" height="10000000"/>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <binding destination="gli-nG-Xsa" name="value" keyPath="selection.notes" id="Va5-DC-azB">
+                                                    <dictionary key="options">
+                                                        <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
                                         </textView>
                                     </subviews>
                                 </clipView>
@@ -1056,6 +1077,7 @@
                 </viewController>
                 <customObject id="Cvo-jB-KFg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <objectController id="gli-nG-Xsa"/>
+                <userDefaultsController id="8J2-ld-V4G"/>
             </objects>
             <point key="canvasLocation" x="1410" y="1048"/>
         </scene>

@@ -21,7 +21,7 @@ class TripDetailsViewController: NSViewController {
         return dateComponentsFormatter
     }()
     
-    var trip: Trip {
+    var trip: Trip! {
         didSet {
             objectController.content = trip
         }

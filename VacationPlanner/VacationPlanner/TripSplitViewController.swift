@@ -11,10 +11,9 @@ import Cocoa
 class TripSplitViewController: NSSplitViewController {
     @IBOutlet var tripsArrayController: NSArrayController!
     
-    var managedObjectContext = (NSApplication.shared.delegate as! AppDelegate).managedObjectContext
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tripsArrayController.managedObjectContext = (NSApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         // Do view setup here.
     }
     
@@ -22,7 +21,7 @@ class TripSplitViewController: NSSplitViewController {
         try? tripsArrayController.fetch(with: nil, merge: false)
         if tripsArrayController.selectedObjects != nil {
             let trip = tripsArrayController.selectedObjects[0] as! Trip
-            let tabViewController = tripsArrayController.selectedObjects[1] as! TripTabViewController
+            let tabViewController = children[1] as! TripTabViewController
             tabViewController.trip = trip
         }
     }

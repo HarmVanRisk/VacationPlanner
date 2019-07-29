@@ -10,7 +10,7 @@ import Cocoa
 
 class TripTabViewController: NSTabViewController {
     
-    var trip: Trip {
+    var trip: Trip! {
         didSet {
             let detailsViewController = children[0] as! TripDetailsViewController
             detailsViewController.trip = trip
