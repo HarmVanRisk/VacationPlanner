@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA126E6F22F0A9F7007063A3 /* TripPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA126E6E22F0A9F7007063A3 /* TripPhotosViewController.swift */; };
+		CA126E7222F0B323007063A3 /* PhotoCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA126E7022F0B323007063A3 /* PhotoCollectionViewItem.swift */; };
+		CA126E7322F0B323007063A3 /* PhotoCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA126E7122F0B323007063A3 /* PhotoCollectionViewItem.xib */; };
+		CA126E7522F0BA94007063A3 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA126E7422F0BA94007063A3 /* AddPhotoViewController.swift */; };
 		CADDCD7622EA0AAB00A8A3C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADDCD7522EA0AAB00A8A3C7 /* AppDelegate.swift */; };
 		CADDCD7B22EA0AAB00A8A3C7 /* VacationPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CADDCD7922EA0AAB00A8A3C7 /* VacationPlanner.xcdatamodeld */; };
 		CADDCD7D22EA0AAE00A8A3C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CADDCD7C22EA0AAE00A8A3C7 /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA126E6E22F0A9F7007063A3 /* TripPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPhotosViewController.swift; sourceTree = "<group>"; };
+		CA126E7022F0B323007063A3 /* PhotoCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewItem.swift; sourceTree = "<group>"; };
+		CA126E7122F0B323007063A3 /* PhotoCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewItem.xib; sourceTree = "<group>"; };
+		CA126E7422F0BA94007063A3 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		CADDCD7222EA0AAB00A8A3C7 /* VacationPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADDCD7522EA0AAB00A8A3C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CADDCD7A22EA0AAB00A8A3C7 /* VacationPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VacationPlanner.xcdatamodel; sourceTree = "<group>"; };
@@ -74,6 +82,10 @@
 				CADDCD8C22EA0CB000A8A3C7 /* TripNotesViewController.swift */,
 				CADDCD8E22EB476A00A8A3C7 /* TripSplitViewController.swift */,
 				CADDCD9022EB47E000A8A3C7 /* TripTabViewController.swift */,
+				CA126E6E22F0A9F7007063A3 /* TripPhotosViewController.swift */,
+				CA126E7022F0B323007063A3 /* PhotoCollectionViewItem.swift */,
+				CA126E7122F0B323007063A3 /* PhotoCollectionViewItem.xib */,
+				CA126E7422F0BA94007063A3 /* AddPhotoViewController.swift */,
 			);
 			path = VacationPlanner;
 			sourceTree = "<group>";
@@ -138,6 +150,7 @@
 			files = (
 				CADDCD7D22EA0AAE00A8A3C7 /* Assets.xcassets in Resources */,
 				CADDCD8022EA0AAE00A8A3C7 /* Main.storyboard in Resources */,
+				CA126E7322F0B323007063A3 /* PhotoCollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,8 +165,11 @@
 				CADDCD8F22EB476A00A8A3C7 /* TripSplitViewController.swift in Sources */,
 				CADDCD8922EA0C6300A8A3C7 /* TripListViewController.swift in Sources */,
 				CADDCD7622EA0AAB00A8A3C7 /* AppDelegate.swift in Sources */,
+				CA126E6F22F0A9F7007063A3 /* TripPhotosViewController.swift in Sources */,
 				CADDCD8B22EA0C9E00A8A3C7 /* TripDetailsViewController.swift in Sources */,
 				CADDCD7B22EA0AAB00A8A3C7 /* VacationPlanner.xcdatamodeld in Sources */,
+				CA126E7522F0BA94007063A3 /* AddPhotoViewController.swift in Sources */,
+				CA126E7222F0B323007063A3 /* PhotoCollectionViewItem.swift in Sources */,
 				CADDCD8D22EA0CB000A8A3C7 /* TripNotesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

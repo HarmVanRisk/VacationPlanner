@@ -58,4 +58,10 @@ class TripDetailsViewController: NSViewController {
         activitiesController.remove(contentsOf: activitiesController.selectedObjects)
     }
     
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "photoSegue" {
+            let photosViewController = (segue.destinationController as! NSWindowController).contentViewController as! TripPhotosViewController
+            photosViewController.trip = trip
+        }
+    }
 }

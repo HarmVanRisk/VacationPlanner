@@ -23,7 +23,7 @@
         <attribute name="startDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="tripType" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="activities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activity" inverseName="trip" inverseEntity="Activity" syncable="YES"/>
-        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="trip" inverseEntity="Photo" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Photo" inverseName="trip" inverseEntity="Photo" syncable="YES"/>
     </entity>
     <elements>
         <element name="Activity" positionX="-36" positionY="72" width="128" height="150"/>
