@@ -13,6 +13,7 @@ class TripDetailsViewController: NSViewController {
     @IBOutlet weak var endDatePicker: NSDatePicker!
     @IBOutlet weak var totalTimeLabel: NSTextField!
     @IBOutlet var objectController: NSObjectController!
+    @IBOutlet var activitiesController: NSArrayController!
     
     lazy var dateComponentsFormatter: DateComponentsFormatter = {
        let dateComponentsFormatter = DateComponentsFormatter()
@@ -24,6 +25,7 @@ class TripDetailsViewController: NSViewController {
     var trip: Trip! {
         didSet {
             objectController.content = trip
+            activitiesController.content = trip.activities
         }
     }
     
@@ -41,5 +43,19 @@ class TripDetailsViewController: NSViewController {
         totalTimeLabel.stringValue = dayDifference//.replacingOccurrences(of: "day", with: "night")
     }
     
+    @IBAction func addActivity(_ sender: NSButton) {
+        let managedObjectContext = (NSApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let activity = NSEntityDescription.insertNewObject(forEntityName: "Activity", into: managedObjectContext) as! Activity
+        activity.trip = trip
+        activitiesController.addObject(activity)
+    }
+    
+    @IBAction func removeActivity(_ sender: NSButton) {
+         let managedObjectContext = (NSApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        for activity in activitiesController.selectedObjects {
+            managedObjectContext.delete(activity as! Activity)
+        }
+        activitiesController.remove(contentsOf: activitiesController.selectedObjects)
+    }
     
 }
